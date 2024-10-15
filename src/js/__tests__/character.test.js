@@ -23,11 +23,12 @@ test.each([
   (name) => {
     const expected = 'В имени персонажа должно быть от 2 до 10 символов';
     const incorrectName = function() {
-    new Character(name, 'Undead');
-  };
+      new Character(name, 'Undead');
+    };
  
-  expect(incorrectName).toThrow(expected);
-});
+    expect(incorrectName).toThrow(expected);
+  };
+);
 
 test('should return type error', () => {
   const incorrectType = function() {
