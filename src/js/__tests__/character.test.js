@@ -27,7 +27,7 @@ test.each([
     };
  
     expect(incorrectName).toThrow(expected);
-  };
+  }
 );
 
 test('should return type error', () => {
