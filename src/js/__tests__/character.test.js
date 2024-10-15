@@ -8,8 +8,8 @@ test('should correct creation of Character object', () => {
     type: 'Undead',
     health: 100,
     level: 1,
-    attack: undefined,
-    defence: undefined
+    attack: null,
+    defence: null
   };
 
   expect(result).toEqual(expected);
@@ -21,8 +21,8 @@ test.each([
 ])(
   ('should return length error for name %s'), 
   (name) => {
-  const expected = 'В имени персонажа должно быть от 2 до 10 символов';
-  const incorrectName = function() {
+    const expected = 'В имени персонажа должно быть от 2 до 10 символов';
+    const incorrectName = function() {
     new Character(name, 'Undead');
   };
  
